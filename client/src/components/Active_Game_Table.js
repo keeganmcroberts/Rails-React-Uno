@@ -865,86 +865,77 @@ function ActiveGame(){
 
     return(
         <div className="container">
-            <h3 className="text"> Its my turn: {playerTurn} </h3> 
+            <h3 className="text">  {playerTurn} turn </h3> 
            
                 <button className="game-buttons" onClick={startingTheGame}>Start Game</button>
                 {/* <button onClick={startingCardDeck} > Start Game </button> */}
                 <button className="game-buttons" onClick={startingHands}> Distribute First Hand </button>
                 {/* {gameisOver()} */} 
-           
-        
-            
-            <div className="player-hands">
-                    
-                   
-                        <My_Hand 
-                        playerTurn={playerTurn}
-                        player1WildCard={player1WildCard}
-                        completeDeck={completeDeck}
-                        displayCard={displayCard} 
-                        player1Turn={player1Turn} 
-                        player1Skip={player1Skip} 
-                        player1HandleReverse={player1HandleReverse} 
-                        myHandState={myHandState}
-                        player1Add2={player1Add2}
-                        draw4WildPlayer1={draw4WildPlayer1}
-                        // puttingDownCardsP1={puttingDownCardsP1}
-                        />
-                   
-                    
-        
-            
-
-                <div className="hand-middle">
-                    
-                        <Other_Player2 
-                        playerTurn={playerTurn}
-                        player2WildCard={player2WildCard}
-                        displayCard={displayCard} 
-                        completeDeck={completeDeck}
-                        player2Turn={player2Turn} 
-                        player2Skip={player2Skip} 
-                        player2HandleReverse={player2HandleReverse} 
-                        player2HandState={player2HandState}
-                        player2Add2={player2Add2}
-                        draw4WildPlayer2={draw4WildPlayer2}/>
-                    
-
-                    <h6 className="player-distinction"> Played Cards</h6>
+                <div className="played-and-draw-cards">
+                    <div className="played-cards">
+                    <h4 className="player-distinction"> Played Cards:</h4>
                         <PlayedCardPile 
                         playedCardsState={playedCards} 
                         displayCard={displayCard} 
                         completeDeck={completeDeck}/>
                         {displayWildCard? <WildCardPopUp playerTurn={playerTurn} setPlayerTurn={setPlayerTurn} clockWise={clockWise} playedCardsState={playedCards} displayWildCard={setDisplayWildCard}/> : null}
-
-
-                    <div>
-                        <img className="game-buttons" onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/>
                     </div>
 
+                    <div className="drawpile">
+                        <h4>Draw Deck:</h4>
+                        <img className="game-buttons" onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/>
+                    </div>
+                </div>
+        
+            
+            <div className="player-hands">
+                    
+                <div className="player1-hand">
+                    <My_Hand 
+                    playerTurn={playerTurn}
+                    player1WildCard={player1WildCard}
+                    completeDeck={completeDeck}
+                    displayCard={displayCard} 
+                    player1Turn={player1Turn} 
+                    player1Skip={player1Skip} 
+                    player1HandleReverse={player1HandleReverse} 
+                    myHandState={myHandState}
+                    player1Add2={player1Add2}
+                    draw4WildPlayer1={draw4WildPlayer1}
+                    // puttingDownCardsP1={puttingDownCardsP1}
+                    />
+                </div>
+                   
+                <div className="player2-hand">             
+                    <Other_Player2 
+                    playerTurn={playerTurn}
+                    player2WildCard={player2WildCard}
+                    displayCard={displayCard} 
+                    completeDeck={completeDeck}
+                    player2Turn={player2Turn} 
+                    player2Skip={player2Skip} 
+                    player2HandleReverse={player2HandleReverse} 
+                    player2HandState={player2HandState}
+                    player2Add2={player2Add2}
+                    draw4WildPlayer2={draw4WildPlayer2}/>
                 </div>
 
-
-                    
-                
-
-                <div className="hand-middle">
-                   
-                        <Other_Player3 
-                        playerTurn={playerTurn}
-                        player3WildCard={player3WildCard}
-                        displayCard={displayCard} 
-                        completeDeck={completeDeck}
-                        player3Turn={player3Turn} 
-                        player3Skip={player3Skip} 
-                        player3HandleReverse={player3HandleReverse} 
-                        player3HandState={player3HandState}
-                        player3Add2={player3Add2}
-                        draw4WildPlayer3={draw4WildPlayer3}/>
+                <div className="player3-hand">
+                    <Other_Player3 
+                    playerTurn={playerTurn}
+                    player3WildCard={player3WildCard}
+                    displayCard={displayCard} 
+                    completeDeck={completeDeck}
+                    player3Turn={player3Turn} 
+                    player3Skip={player3Skip} 
+                    player3HandleReverse={player3HandleReverse} 
+                    player3HandState={player3HandState}
+                    player3Add2={player3Add2}
+                    draw4WildPlayer3={draw4WildPlayer3}/>
                    
                 </div>
             
-                
+                <div className="player4-hand">
                     <Other_Player4 
                     playerTurn={playerTurn}
                     player4WildCard={player4WildCard}
@@ -956,6 +947,7 @@ function ActiveGame(){
                     player4HandState={player4HandState}
                     player4Add2={player4Add2} 
                     draw4WildPlayer4={draw4WildPlayer4}/>
+                </div>
                      
             </div>
 
