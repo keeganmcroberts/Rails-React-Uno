@@ -19,7 +19,7 @@ function Other_Player2({completeDeck,
     return( <>
 
         <h2 className="player-names"> Player 2</h2>
-        <div className="player-top">
+        <div className="player-hand">
             <Player2Card 
                 displayCard={displayCard} 
                 onClick={player2HandState} 

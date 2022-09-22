@@ -19,7 +19,7 @@ function PlayerHand({ completeDeck={completeDeck},
  return(
     <>
         <h2 className="player-names"> Player 1 </h2>
-        <div className="player-left">
+        <div className="player-hand">
         {/* {displayCard ?  */}
        
         <Player1_Card 

@@ -287,6 +287,13 @@ html{
   
 }
 
-.img{
-  border: 1px solid rgb(9, 8, 8);
+.card{
+  border: .5px solid rgb(248, 245, 245);
+  height: 100px;
+  background-color:rgb(19, 23, 34)
+ 
+}
+
+.player-hand{
+  padding: 5px;
 }

@@ -17,7 +17,7 @@ function Other_Player3({player3HandState,
     return( <>
         
         <h2 className="player-names"> Player 3 </h2>
-        <div className="player-bottom">
+        <div className="player-hand">
             <Player3_Card 
               
                 draw4WildPlayer3={draw4WildPlayer3}

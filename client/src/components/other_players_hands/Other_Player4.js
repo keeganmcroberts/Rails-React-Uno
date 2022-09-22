@@ -18,7 +18,7 @@ function Other_Player4({displayCard,
     return(
     <>
         <h2 className="player-names"> Player 4</h2>
-        <div className="player-right">
+        <div className="player-hand">
             <Player4Card 
               
                 draw4WildPlayer4={draw4WildPlayer4}

@@ -898,7 +898,7 @@ function ActiveGame(){
 
                     <div className="drawpile">
                         <h4>Draw Deck:</h4>
-                        { gameInProgress ? <img onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/> : null}
+                        { gameInProgress ? <img className="card" onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/> : null}
                     </div>
                     </div>
                 </div>
