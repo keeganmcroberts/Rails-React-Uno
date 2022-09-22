@@ -205,7 +205,7 @@ form {
   align-items: center;
   grid-column-gap: 0rem;
   padding: 1rem;
-  background: linear-gradient(to right, red, purple);
+  background: linear-gradient(to right, rgb(30, 160, 4), rgb(88, 47, 235));
   padding: 3px;
 }
 
@@ -216,31 +216,33 @@ form {
   align-items: center;
   grid-column-gap: 0rem;
   width: 1600px;
-    background: rgb(89, 90, 92);
-    color: white;
+    background: rgb(10, 10, 10);
+    color: rgb(88, 47, 235);
+    text-shadow: 1px 1px rgb(30, 160, 4);
     /* padding: 2rem; */
 
 }
 
 
- 
- 
-
  .main-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* color: linear-gradient(rgb(183, 0, 255), rgb(0, 42, 255), rgb(0, 255, 4), rgb(255, 0, 0) ); */
-  font-size: 50px;
-  /* background: -webkit-linear-gradient(rgb(223, 26, 234), rgb(34, 20, 224), rgb(20, 224, 47), rgb(224, 20, 20));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   */
-  color: rgb(155, 4, 160);
-  text-shadow: 2px 2px rgb(241, 15, 15);
-
+  font-size: 80px;
+  color: rgb(30, 160, 4);
+  text-shadow: 4px 4px rgb(88, 47, 235);
+  margin-top: 25%;
   
+  
+}
+.main-title-game-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 50px;
+  color: rgb(30, 160, 4);
+  text-shadow: 2px 2px rgb(88, 47, 235);
+ 
 }
 
 .game-buttons{
@@ -254,6 +256,8 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: rgb(88, 47, 235);
+  text-shadow: 1px 1px rgb(30, 160, 4);
   
 }
 
@@ -263,12 +267,23 @@ form {
     justify-content: space-evenly;
     align-items: center;
     grid-column-gap: 2rem;
-    
+    color: rgb(88, 47, 235);
+    text-shadow: 1px 1px rgb(30, 160, 4);
+}
+
+
+.hover-buttons{
+  opacity: .5;
+}
+
+.hover-buttons:hover{
+  opacity: 1;
+background-color: rgb(30, 160, 4);
 }
 
 
 html{
-  background-color: rgb(89, 90, 92);
+  background-color: rgb(3, 3, 3);
   
 }
 

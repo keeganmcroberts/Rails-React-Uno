@@ -877,10 +877,10 @@ function ActiveGame(){
 
     return(
         <div className="container">
-            { gameInProgress ? <h1 className="main-title"> Um </h1> : <h1 className="main-title"> Um </h1>}
+            { gameInProgress ? <h1 className="main-title-game-page"> Um </h1> : <h1 className="main-title"> Welcome to Um! </h1>}
             <div className="game-buttons">
-                { gameInProgress ? null : <button  onClick={startingTheGame}>Start Game</button>}
-                { gameInProgress && displayCard === false ? <button  onClick={startingHands}> Distribute First Hand </button> : null  }
+                { gameInProgress ? null : <button className="hover-buttons"  onClick={startingTheGame}>Start Game</button>}
+                { gameInProgress && displayCard === false ? <button className="hover-buttons"  onClick={startingHands}> Distribute First Hand </button> : null  }
             </div>
             { gameInProgress ? <div className="game-table">
                 {gameInProgress ? <h3 className="text">  {playerTurn} turn </h3> : null}
