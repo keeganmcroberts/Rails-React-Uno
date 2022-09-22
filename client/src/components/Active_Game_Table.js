@@ -863,27 +863,39 @@ function ActiveGame(){
 
     
 
+    function declareWinner(){
+        if(myHandState === 0 )
+            return alert("Player 1 Wins!")
+        else if (player2HandState === 0)
+            return alert("Player 2 Wins!")
+        else if (player3HandState === 0)
+            return alert("Player 3 Wins!")
+        else if (player4HandState)
+            return alert("Player 4 Wins!")
+        
+    }
+
     return(
         <div className="container">
-            <h3 className="text">  {playerTurn} turn </h3> 
-           
-                <button className="game-buttons" onClick={startingTheGame}>Start Game</button>
-                {/* <button onClick={startingCardDeck} > Start Game </button> */}
-                <button className="game-buttons" onClick={startingHands}> Distribute First Hand </button>
+            <div className="game-buttons">
+                <button  onClick={startingTheGame}>Start Game</button>
+                <button  onClick={startingHands}> Distribute First Hand </button>
+            </div>
+                {gameInProgress ? <h3 className="text">  {playerTurn} turn </h3> : null}
                 {/* {gameisOver()} */} 
                 <div className="played-and-draw-cards">
                     <div className="played-cards">
-                    <h4 className="player-distinction"> Played Cards:</h4>
+                    <h4> Played Cards:</h4>
                         <PlayedCardPile 
                         playedCardsState={playedCards} 
                         displayCard={displayCard} 
                         completeDeck={completeDeck}/>
-                        {displayWildCard? <WildCardPopUp playerTurn={playerTurn} setPlayerTurn={setPlayerTurn} clockWise={clockWise} playedCardsState={playedCards} displayWildCard={setDisplayWildCard}/> : null}
                     </div>
+                    <div>{displayWildCard? <WildCardPopUp playerTurn={playerTurn} setPlayerTurn={setPlayerTurn} clockWise={clockWise} playedCardsState={playedCards} displayWildCard={setDisplayWildCard}/> : null}</div>
 
                     <div className="drawpile">
                         <h4>Draw Deck:</h4>
-                        <img className="game-buttons" onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/>
+                        { gameInProgress ? <img onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/> : null}
                     </div>
                 </div>
         

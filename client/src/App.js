@@ -50,25 +50,6 @@ function App() {
     setCurrentPlayer(null);
   }
 
-  // if (!currentPlayer)
-  //   return (
-  //     <>
-  //     <div className="header-first">
-  //     <img
-  //         src="https://media.istockphoto.com/vectors/abstract-vaporwave-cube-background-vector-id1011629528?k=20&m=1011629528&s=612x612&w=0&h=oZg2mmr_wVTxBdkVeVrHfYNbyiyUpSnu6OvyjQmIYVQ="
-  //         alt="LOGO"
-  //       />
-  //     </div>
-  //       <h1 className="main-title">Welcome to Um!</h1>
-  //       <LandingPage />
-  //       <h2 className="toggle-login-and-sign-up">Login:</h2>
-  //       <LoginForm error={"please login"} setCurrentPlayer={setCurrentPlayer} />
-  //       <h2 className="toggle-login-and-sign-up">Sign-up:</h2>
-  //       <SignUp setCurrentPlayer={setCurrentPlayer} />
-  //       <Footer/>
-  //     </>
-  //   );
-
   return (
     <Container>
       <h1 className="main-title">Welcome back to Um </h1>

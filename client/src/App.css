@@ -200,8 +200,10 @@ form {
 
 .played-and-draw-cards{
   display:flex;
-  justify-content: left;
-  grid-column-gap: 4rem;
+  /* justify-content: left; */
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column-gap: 0rem;
 }
 
 /* img {
@@ -217,13 +219,26 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top:1em;
   text-shadow: 1.3px 1px #1f3063; 
 
+}
+
+.game-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .text{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.player-hands{
+    display:flex;
+    /* justify-content: left; */
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column-gap: 2rem;
 }
