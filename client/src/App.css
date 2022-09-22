@@ -204,14 +204,25 @@ form {
   justify-content: space-evenly;
   align-items: center;
   grid-column-gap: 0rem;
+  padding: 1rem;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
 }
 
-/* img {
-  width: 80px;
-  height: 120px;
+.inner-div{
+  display:flex;
+  /* justify-content: left; */
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column-gap: 0rem;
+  width: 1600px;
+    background: rgb(89, 90, 92);
+    color: white;
+    /* padding: 2rem; */
+
+}
 
 
- } */
  
  
 
@@ -219,20 +230,31 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-shadow: 1.3px 1px #1f3063; 
+  /* color: linear-gradient(rgb(183, 0, 255), rgb(0, 42, 255), rgb(0, 255, 4), rgb(255, 0, 0) ); */
+  font-size: 50px;
+  /* background: -webkit-linear-gradient(rgb(223, 26, 234), rgb(34, 20, 224), rgb(20, 224, 47), rgb(224, 20, 20));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   */
+  color: rgb(155, 4, 160);
+  text-shadow: 2px 2px rgb(241, 15, 15);
 
+  
 }
 
 .game-buttons{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
 }
 
 .text{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .player-hands{
@@ -241,4 +263,15 @@ form {
     justify-content: space-evenly;
     align-items: center;
     grid-column-gap: 2rem;
+    
+}
+
+
+html{
+  background-color: rgb(89, 90, 92);
+  
+}
+
+.img{
+  border: 1px solid rgb(9, 8, 8);
 }

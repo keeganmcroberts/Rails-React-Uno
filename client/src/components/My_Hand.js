@@ -18,7 +18,7 @@ function PlayerHand({ completeDeck={completeDeck},
     
  return(
     <>
-        <h2 className="player-distinction"> My Hand </h2>
+        <h2 className="player-names"> Player 1 </h2>
         <div className="player-left">
         {/* {displayCard ?  */}
        

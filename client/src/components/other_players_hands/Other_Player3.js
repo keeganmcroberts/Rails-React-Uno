@@ -16,7 +16,7 @@ function Other_Player3({player3HandState,
 
     return( <>
         
-        <h2 className="player-distinction"> Player 3 Hand</h2>
+        <h2 className="player-names"> Player 3 </h2>
         <div className="player-bottom">
             <Player3_Card 
               

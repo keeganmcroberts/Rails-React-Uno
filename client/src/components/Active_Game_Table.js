@@ -877,13 +877,16 @@ function ActiveGame(){
 
     return(
         <div className="container">
+            { gameInProgress ? <h1 className="main-title"> Um </h1> : <h1 className="main-title"> Um </h1>}
             <div className="game-buttons">
-                <button  onClick={startingTheGame}>Start Game</button>
-                <button  onClick={startingHands}> Distribute First Hand </button>
+                { gameInProgress ? null : <button  onClick={startingTheGame}>Start Game</button>}
+                { gameInProgress && displayCard === false ? <button  onClick={startingHands}> Distribute First Hand </button> : null  }
             </div>
+            { gameInProgress ? <div className="game-table">
                 {gameInProgress ? <h3 className="text">  {playerTurn} turn </h3> : null}
                 {/* {gameisOver()} */} 
                 <div className="played-and-draw-cards">
+                    <div className="inner-div">
                     <div className="played-cards">
                     <h4> Played Cards:</h4>
                         <PlayedCardPile 
@@ -896,6 +899,7 @@ function ActiveGame(){
                     <div className="drawpile">
                         <h4>Draw Deck:</h4>
                         { gameInProgress ? <img onClick={ addsCardToHand} src={backOfCard} alt="the back the cards" height={100} width={75}/> : null}
+                    </div>
                     </div>
                 </div>
         
@@ -963,7 +967,7 @@ function ActiveGame(){
                      
             </div>
 
-            
+            </div> : null}
         </div>
     )
 }

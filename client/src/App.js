@@ -52,7 +52,6 @@ function App() {
 
   return (
     <Container>
-      <h1 className="main-title">Welcome back to Um </h1>
       <Routes>
         <Route path="/" element={<ActiveGame/>}></Route>
       </Routes>

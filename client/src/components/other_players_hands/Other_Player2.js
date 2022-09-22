@@ -18,7 +18,7 @@ function Other_Player2({completeDeck,
       
     return( <>
 
-        <h2 className="player-distinction"> Player 2 Hand</h2>
+        <h2 className="player-names"> Player 2</h2>
         <div className="player-top">
             <Player2Card 
                 displayCard={displayCard} 

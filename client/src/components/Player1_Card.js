@@ -79,11 +79,7 @@ function Player1Card({ playerTurn, puttingDownCardsP1,player1WildCard, draw4Wild
     // const [testcard, setTestCard] = useState({"emblem": "druid", "number": "5" })
 
     function cardImageAssignment(){
-        // console.log("THE HAND:", eachCard)
-        
-        // if (myHandState > 1 && player2HandState > 1 && player3HandState > 1 && player4HandState > 1)
-        // if (myHandState > 0)  
-  
+       
         return myHandState.map( eachCard =>{
          
         if (eachCard.emblem === "thief_0")
